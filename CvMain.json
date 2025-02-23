@@ -1,0 +1,107 @@
+{
+    "basicsmain": {
+      "name": "Evaristo Sandoval Gil",
+      "label": "Desarrollador Full Stack",
+      "image": "/path/to/your/profile/image.jpg",
+      "email": "your.email@example.com",
+      "phone": "+34 123456789",
+      "url": "https://yourwebsite.com",
+      "summary": "Apasionado desarrollador Full Stack con experiencia en la creación de aplicaciones web modernas y escalables. Especializado en tecnologías como JavaScript, React, Node.js, MongoDB y PostgreSQL. Mi enfoque es construir soluciones eficientes y de alta calidad, centrándome en la experiencia del usuario y las mejores prácticas de desarrollo. Siempre estoy aprendiendo nuevas tecnologías y mejorando mis habilidades para mantenerme al día con las últimas tendencias.",
+      "location": {
+        "address": "",
+        "postalCode": "12345",
+        "city": "Tu Ciudad",
+        "countryCode": "ES",
+        "region": "España"
+      },
+      "profiles": [
+        {
+          "network": "LinkedIn",
+          "username": "evaristosandoval",
+          "url": "https://linkedin.com/in/evaristosandoval"
+        },
+        {
+          "network": "GitHub",
+          "username": "evaristosandoval",
+          "url": "https://github.com/evaristosandoval"
+        }
+      ]
+    },
+    "work": [
+      {
+        "name": "Oesia",
+        "position": "Desarrollador .NET",
+        "url": "https://oesia.com",
+        "startDate": "2024-03-01",
+        "endDate": "2024-09-01",
+        "summary": "Mi principal función fue el mantenimiento y desarrollo de una aplicación de escritorio para la gestión de ElPozo, utilizando tecnologías como Visual Basic, SQL, PL/SQL, Git y DevExpress, además de recibir formación en ASP.NET y Android Studio."
+      },
+      {
+        "name": "Nueva Cocina Mediterranea",
+        "position": "Operario de línea",
+        "url": "https://nuevacocinamediterranea.com",
+        "startDate": "2019-01-01",
+        "endDate": "2022-12-31",
+        "summary": "Recepción, inspección y almacenamiento adecuado de materias primas y materiales de embalaje. Realización de tareas de corte, picado, mezclado, o lavado de ingredientes según el proceso de producción. Supervisión del buen funcionamiento de las máquinas y ajustes según sea necesario en línea de producción. Manipulación de alimentos en línea de producción."
+      }
+    ],
+    "projects": [
+      {
+        "name": "Proyecto 1",
+        "description": "Breve descripción del proyecto. Puedes incluir tecnologías utilizadas o el propósito del proyecto.",
+        "highlights": [
+          "React",
+          "Node.js",
+          "MongoDB"
+        ],
+        "url": "https://proyecto1.com"
+      },
+      {
+        "name": "Proyecto 2",
+        "description": "Breve descripción del proyecto. Puedes incluir tecnologías utilizadas o el propósito del proyecto.",
+        "highlights": [
+          "Vue.js",
+          "Express",
+          "PostgreSQL"
+        ],
+        "url": "https://proyecto2.com"
+      },
+      {
+        "name": "Proyecto 3",
+        "description": "Breve descripción del proyecto. Puedes incluir tecnologías utilizadas o el propósito del proyecto.",
+        "highlights": [
+          "Angular",
+          "NestJS",
+          "MySQL"
+        ],
+        "url": "https://proyecto3.com"
+      }
+    ],
+    "certificates": [
+      {
+        "name": "Big Data en el sector transporte",
+        "date": "2023-01-01",
+        "issuer": "Institución Emisora",
+        "url": "https://certificado1.com"
+      },
+      {
+        "name": "Nombre del Curso",
+        "date": "2023-02-01",
+        "issuer": "Institución Emisora",
+        "url": "https://certificado2.com"
+      },
+      {
+        "name": "Nombre del Curso",
+        "date": "2023-03-01",
+        "issuer": "Institución Emisora",
+        "url": "https://certificado3.com"
+      },
+      {
+        "name": "Nombre del Curso",
+        "date": "2023-04-01",
+        "issuer": "Institución Emisora",
+        "url": "https://certificado4.com"
+      }
+    ]
+  }
+  

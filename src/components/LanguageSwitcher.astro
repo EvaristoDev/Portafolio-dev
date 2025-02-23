@@ -1,0 +1,21 @@
+---
+// components/LanguageSwitcher.astro
+import { setLanguagePreference, languagePreference } from '../utils/languageSwitcher2.js';
+---
+
+<div class="flex space-x-2">
+  <button
+    id="es"
+    class={`px-4 py-2 rounded ${languagePreference.value === 'es' ? 'bg-blue-500 text-white' : 'bg-gray-300'}`}
+    onclick={() => setLanguagePreference('es')}
+  >
+    Español
+  </button>
+  <button
+    id="en"
+    class={`px-4 py-2 rounded ${languagePreference.value === 'en' ? 'bg-blue-500 text-white' : 'bg-gray-300'}`}
+    onclick={() => setLanguagePreference('en')}
+  >
+    English
+  </button>
+</div>

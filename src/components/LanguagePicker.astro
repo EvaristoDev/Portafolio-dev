@@ -1,0 +1,25 @@
+// src/components/LanguagePicker.astro
+---
+import { useTranslation } from 'react-i18next';
+import { languages } from "@/i18n/ui";
+
+const { i18n } = useTranslation();
+
+const changeLanguage = (lng) => {
+  i18n.changeLanguage(lng);
+};
+---
+
+{
+  Object.entries(languages).map(([langPrefix, langName]) => {
+    if (langPrefix === i18n.language) return <></>
+    return (<a href="#" onClick={() => changeLanguage(langPrefix)}>{langName}</a>)
+  })
+}
+
+<style>
+  /* TODO: Use a CSS rule global */
+  a {
+    text-underline-offset: 5px;
+  }
+</style>

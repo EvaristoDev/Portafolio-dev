@@ -1,0 +1,54 @@
+---
+import { getLanguagePreference } from '../utils/languageSwitcher.js';
+
+// Obtener el idioma preferido del cliente
+const languagePreference = getLanguagePreference();
+
+// Importar el JSON correspondiente
+const work = languagePreference === 'en'
+  ? (await import('@/CV/CvMainEnglish.json')).work
+  : (await import('@/CV/CvMain.json')).work;
+---
+
+<section id="experiencia" class="py-16">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-gray-800 mb-4">Experiencia Profesional</h2>
+    </div>
+
+    <div class="relative ml-12">
+      <!-- Línea vertical -->
+      <div class="absolute left-4 top-0 w-1 h-full bg-blue-100"></div>
+
+      {
+        work.map((exp, index) => {
+          const startYear = new Date(exp.startDate).toLocaleDateString('es-ES', { year: 'numeric', month: 'long' });
+          const endYear = exp.endDate ? new Date(exp.endDate).toLocaleDateString('es-ES', { year: 'numeric', month: 'long' }) : 'Actual';
+
+          return (
+            <div class="relative mb-12 pl-12 group">
+              <!-- Punto de la timeline -->
+              <div class="absolute -left-2 top-0 w-12 flex justify-center">
+                <div class="
+                  h-4 w-4 rounded-full
+                  bg-blue-600
+                  ring-4 ring-white
+                  shadow-md
+                  group-hover:scale-125 transition-transform duration-300
+                "></div>
+              </div>
+
+              <!-- Contenido alineado a la izquierda -->
+              <div class="transition-transform duration-300 group-hover:translate-x-2">
+                <h3 class="text-2xl font-bold text-gray-800">{exp.position}</h3>
+                <h2 class="text-gray-800 font-medium">{exp.name}</h2>
+                <p class="text-sm text-gray-500">{startYear} - {endYear}</p>
+                <p class="text-gray-600 leading-relaxed mt-2">{exp.summary}</p>
+              </div>
+            </div>
+          );
+        })
+      }
+    </div>
+  </div>
+</section>

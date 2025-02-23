@@ -1,0 +1,49 @@
+---
+import { Image } from 'astro:assets';
+import CertificadoPlaceholder from './public/BigDataeIA.webp'; // Imagen de placeholder para certificados
+import { getLanguagePreference } from '../utils/languageSwitcher.js';
+
+// Obtener el idioma preferido del cliente
+const languagePreference = getLanguagePreference();
+
+// Importar el JSON correspondiente
+const certificates = languagePreference === 'en'
+  ? (await import('@/CV/CvMainEnglish.json')).certificates
+  : (await import('@/CV/CvMain.json')).certificates;
+---
+
+<section id="certificaciones" class="py-16">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-gray-800 mb-4">Certificaciones</h2>
+    </div>
+    <!-- Contenedor de scroll horizontal -->
+    <div class="overflow-x-auto pb-6">
+      <div class="flex gap-6" style="min-width: max-content;">
+        {
+          certificates.map((cert, index) => (
+            <div class="bg-white rounded-lg shadow-lg shadow-blue-300/50 overflow-hidden hover:shadow-xl transition-shadow duration-300 flex-shrink-0 w-72">
+              <Image
+                src={CertificadoPlaceholder}
+                alt={`Certificación ${index + 1}`}
+                width={288}
+                height={180}
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-800 dark:text-gray-800 mb-2">{cert.name}</h3>
+                <p class="text-gray-600 dark:text-gray-600 mb-4">{`Certificación obtenida de ${cert.issuer} en ${new Date(cert.date).getFullYear()}.`}</p>
+                <a
+                  href={cert.url}
+                  class="text-blue-600 hover:text-blue-800 font-semibold"
+                >
+                  Ver Certificado →
+                </a>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

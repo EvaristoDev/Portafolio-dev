@@ -1,0 +1,19 @@
+{
+    "experiencias": [
+      {
+        "name": "Oesia",
+        "position": ".NET Developer",
+        "startDate": "2024-03-01",
+        "endDate": "2024-09-01",
+        "summary": "My main function was the maintenance and development of a desktop application for the management of ElPozo, using technologies such as Visual Basic, SQL, PL/SQL, Git and DevExpress, in addition to receiving training in ASP.NET and Android Studio."
+      },
+      {
+        "name": "Nueva Cocina Mediterranea",
+        "position": "Line Operator",
+        "startDate": "2019-01-01",
+        "endDate": "2022-12-31",
+        "summary": "Reception, inspection and adequate storage of raw materials and packaging materials. Performing tasks such as cutting, chopping, mixing, or washing ingredients according to the production process. Supervision of the proper functioning of machines and adjustments as necessary in the production line. Handling of food in the production line."
+      }
+    ]
+  }
+  
